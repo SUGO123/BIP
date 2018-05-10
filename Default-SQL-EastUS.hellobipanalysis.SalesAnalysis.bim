@@ -1,0 +1,1080 @@
+{
+  "name": "SalesAnalysis",
+  "description": "Imported database from sql server 'gz7pumjzm4.database.windows.net' and database 'Advenature_Works'",
+  "compatibilityLevel": 1400,
+  "model": {
+    "name": "SalesAnalysis",
+    "description": "A Tabular data model at the 1400 compatibility level.",
+    "defaultMode": "directQuery",
+    "culture": "en-US",
+    "dataSources": [
+      {
+        "name": "SqlServer gz7pumjzm4.database.windows.net Advenature_Works",
+        "description": "A data source definition that uses explicit sql server credentials from connection string",
+        "connectionString": "Provider=SQLNCLI11;Server=tcp:gz7pumjzm4.database.windows.net;Initial Catalog=Advenature_Works;Persist Security Info=False;User ID=kare4u;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30",
+        "impersonationMode": "impersonateServiceAccount"
+      }
+    ],
+    "tables": [
+      {
+        "name": "DimCustomer",
+        "description": "All data from DimCustomer",
+        "columns": [
+          {
+            "name": "CustomerKey",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "CustomerKey"
+          },
+          {
+            "name": "GeographyKey",
+            "dataType": "int64",
+            "sourceColumn": "GeographyKey",
+            "displayOrdinal": 1
+          },
+          {
+            "name": "CustomerAlternateKey",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "CustomerAlternateKey",
+            "displayOrdinal": 2
+          },
+          {
+            "name": "Title",
+            "dataType": "string",
+            "sourceColumn": "Title",
+            "displayOrdinal": 3
+          },
+          {
+            "name": "FirstName",
+            "dataType": "string",
+            "sourceColumn": "FirstName",
+            "displayOrdinal": 4
+          },
+          {
+            "name": "MiddleName",
+            "dataType": "string",
+            "sourceColumn": "MiddleName",
+            "displayOrdinal": 5
+          },
+          {
+            "name": "LastName",
+            "dataType": "string",
+            "sourceColumn": "LastName",
+            "displayOrdinal": 6
+          },
+          {
+            "name": "NameStyle",
+            "dataType": "boolean",
+            "sourceColumn": "NameStyle",
+            "displayOrdinal": 7
+          },
+          {
+            "name": "BirthDate",
+            "dataType": "dateTime",
+            "sourceColumn": "BirthDate",
+            "displayOrdinal": 8
+          },
+          {
+            "name": "MaritalStatus",
+            "dataType": "string",
+            "sourceColumn": "MaritalStatus",
+            "displayOrdinal": 9
+          },
+          {
+            "name": "Suffix",
+            "dataType": "string",
+            "sourceColumn": "Suffix",
+            "displayOrdinal": 10
+          },
+          {
+            "name": "Gender",
+            "dataType": "string",
+            "sourceColumn": "Gender",
+            "displayOrdinal": 11
+          },
+          {
+            "name": "EmailAddress",
+            "dataType": "string",
+            "sourceColumn": "EmailAddress",
+            "displayOrdinal": 12
+          },
+          {
+            "name": "YearlyIncome",
+            "dataType": "decimal",
+            "sourceColumn": "YearlyIncome",
+            "displayOrdinal": 13
+          },
+          {
+            "name": "TotalChildren",
+            "dataType": "int64",
+            "sourceColumn": "TotalChildren",
+            "displayOrdinal": 14
+          },
+          {
+            "name": "NumberChildrenAtHome",
+            "dataType": "int64",
+            "sourceColumn": "NumberChildrenAtHome",
+            "displayOrdinal": 15
+          },
+          {
+            "name": "EnglishEducation",
+            "dataType": "string",
+            "sourceColumn": "EnglishEducation",
+            "displayOrdinal": 16
+          },
+          {
+            "name": "SpanishEducation",
+            "dataType": "string",
+            "sourceColumn": "SpanishEducation",
+            "displayOrdinal": 17
+          },
+          {
+            "name": "FrenchEducation",
+            "dataType": "string",
+            "sourceColumn": "FrenchEducation",
+            "displayOrdinal": 18
+          },
+          {
+            "name": "EnglishOccupation",
+            "dataType": "string",
+            "sourceColumn": "EnglishOccupation",
+            "displayOrdinal": 19
+          },
+          {
+            "name": "SpanishOccupation",
+            "dataType": "string",
+            "sourceColumn": "SpanishOccupation",
+            "displayOrdinal": 20
+          },
+          {
+            "name": "FrenchOccupation",
+            "dataType": "string",
+            "sourceColumn": "FrenchOccupation",
+            "displayOrdinal": 21
+          },
+          {
+            "name": "HouseOwnerFlag",
+            "dataType": "string",
+            "sourceColumn": "HouseOwnerFlag",
+            "displayOrdinal": 22
+          },
+          {
+            "name": "NumberCarsOwned",
+            "dataType": "int64",
+            "sourceColumn": "NumberCarsOwned",
+            "displayOrdinal": 23
+          },
+          {
+            "name": "AddressLine1",
+            "dataType": "string",
+            "sourceColumn": "AddressLine1",
+            "displayOrdinal": 24
+          },
+          {
+            "name": "AddressLine2",
+            "dataType": "string",
+            "sourceColumn": "AddressLine2",
+            "displayOrdinal": 25
+          },
+          {
+            "name": "Phone",
+            "dataType": "string",
+            "sourceColumn": "Phone",
+            "displayOrdinal": 26
+          },
+          {
+            "name": "DateFirstPurchase",
+            "dataType": "dateTime",
+            "sourceColumn": "DateFirstPurchase",
+            "displayOrdinal": 27
+          },
+          {
+            "name": "CommuteDistance",
+            "dataType": "string",
+            "sourceColumn": "CommuteDistance",
+            "displayOrdinal": 28
+          },
+          {
+            "type": "calculated",
+            "name": "UnitPrice",
+            "dataType": "unknown",
+            "isDataTypeInferred": true,
+            "expression": "select UnitPrice/2"
+          },
+          {
+            "type": "calculated",
+            "name": "h",
+            "dataType": "unknown",
+            "isDataTypeInferred": true,
+            "expression": "=AVERAGE('FactInternetSales'[UnitPrice])"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DimCustomer",
+            "source": {
+              "query": "SELECT [CustomerKey],[GeographyKey],[CustomerAlternateKey],[Title],[FirstName],[MiddleName],[LastName],[NameStyle],[BirthDate],[MaritalStatus],[Suffix],[Gender],[EmailAddress],[YearlyIncome],[TotalChildren],[NumberChildrenAtHome],[EnglishEducation],[SpanishEducation],[FrenchEducation],[EnglishOccupation],[SpanishOccupation],[FrenchOccupation],[HouseOwnerFlag],[NumberCarsOwned],[AddressLine1],[AddressLine2],[Phone],[DateFirstPurchase],[CommuteDistance] FROM [dbo].[DimCustomer]",
+              "dataSource": "SqlServer gz7pumjzm4.database.windows.net Advenature_Works"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DimDate",
+        "description": "All data from DimDate",
+        "columns": [
+          {
+            "name": "DateKey",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "DateKey"
+          },
+          {
+            "name": "FullDateAlternateKey",
+            "dataType": "dateTime",
+            "isNullable": false,
+            "sourceColumn": "FullDateAlternateKey",
+            "displayOrdinal": 1
+          },
+          {
+            "name": "DayNumberOfWeek",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "DayNumberOfWeek",
+            "displayOrdinal": 2
+          },
+          {
+            "name": "EnglishDayNameOfWeek",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "EnglishDayNameOfWeek",
+            "displayOrdinal": 3
+          },
+          {
+            "name": "SpanishDayNameOfWeek",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "SpanishDayNameOfWeek",
+            "displayOrdinal": 4
+          },
+          {
+            "name": "FrenchDayNameOfWeek",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "FrenchDayNameOfWeek",
+            "displayOrdinal": 5
+          },
+          {
+            "name": "DayNumberOfMonth",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "DayNumberOfMonth",
+            "displayOrdinal": 6
+          },
+          {
+            "name": "DayNumberOfYear",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "DayNumberOfYear",
+            "displayOrdinal": 7
+          },
+          {
+            "name": "WeekNumberOfYear",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "WeekNumberOfYear",
+            "displayOrdinal": 8
+          },
+          {
+            "name": "EnglishMonthName",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "EnglishMonthName",
+            "displayOrdinal": 9
+          },
+          {
+            "name": "SpanishMonthName",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "SpanishMonthName",
+            "displayOrdinal": 10
+          },
+          {
+            "name": "FrenchMonthName",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "FrenchMonthName",
+            "displayOrdinal": 11
+          },
+          {
+            "name": "MonthNumberOfYear",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "MonthNumberOfYear",
+            "displayOrdinal": 12
+          },
+          {
+            "name": "CalendarQuarter",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "CalendarQuarter",
+            "displayOrdinal": 13
+          },
+          {
+            "name": "CalendarYear",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "CalendarYear",
+            "displayOrdinal": 14
+          },
+          {
+            "name": "CalendarSemester",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "CalendarSemester",
+            "displayOrdinal": 15
+          },
+          {
+            "name": "FiscalQuarter",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "FiscalQuarter",
+            "displayOrdinal": 16
+          },
+          {
+            "name": "FiscalYear",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "FiscalYear",
+            "displayOrdinal": 17
+          },
+          {
+            "name": "FiscalSemester",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "FiscalSemester",
+            "displayOrdinal": 18
+          },
+          {
+            "type": "calculated",
+            "name": "month1",
+            "dataType": "unknown",
+            "isDataTypeInferred": true,
+            "expression": "=RIGHT(\" \" & FORMAT([MonthNumberOfYear],\"#0\"), 2) & \" - \" & [EnglishMonthName]"
+          },
+          {
+            "type": "calculated",
+            "name": "rgyrth",
+            "dataType": "unknown",
+            "isDataTypeInferred": true,
+            "expression": "=RIGHT(\" \" & FORMAT([MonthNumberOfYear],\"#0\"), 2) & \" - \" & [EnglishMonthName]"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DimDate",
+            "source": {
+              "query": "SELECT [DateKey],[FullDateAlternateKey],[DayNumberOfWeek],[EnglishDayNameOfWeek],[SpanishDayNameOfWeek],[FrenchDayNameOfWeek],[DayNumberOfMonth],[DayNumberOfYear],[WeekNumberOfYear],[EnglishMonthName],[SpanishMonthName],[FrenchMonthName],[MonthNumberOfYear],[CalendarQuarter],[CalendarYear],[CalendarSemester],[FiscalQuarter],[FiscalYear],[FiscalSemester] FROM [dbo].[DimDate]",
+              "dataSource": "SqlServer gz7pumjzm4.database.windows.net Advenature_Works"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DimGeography",
+        "description": "All data from DimGeography",
+        "columns": [
+          {
+            "name": "GeographyKey",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "GeographyKey"
+          },
+          {
+            "name": "City",
+            "dataType": "string",
+            "sourceColumn": "City",
+            "displayOrdinal": 1
+          },
+          {
+            "name": "StateProvinceCode",
+            "dataType": "string",
+            "sourceColumn": "StateProvinceCode",
+            "displayOrdinal": 2
+          },
+          {
+            "name": "StateProvinceName",
+            "dataType": "string",
+            "sourceColumn": "StateProvinceName",
+            "displayOrdinal": 3
+          },
+          {
+            "name": "CountryRegionCode",
+            "dataType": "string",
+            "sourceColumn": "CountryRegionCode",
+            "displayOrdinal": 4
+          },
+          {
+            "name": "EnglishCountryRegionName",
+            "dataType": "string",
+            "sourceColumn": "EnglishCountryRegionName",
+            "displayOrdinal": 5
+          },
+          {
+            "name": "SpanishCountryRegionName",
+            "dataType": "string",
+            "sourceColumn": "SpanishCountryRegionName",
+            "displayOrdinal": 6
+          },
+          {
+            "name": "FrenchCountryRegionName",
+            "dataType": "string",
+            "sourceColumn": "FrenchCountryRegionName",
+            "displayOrdinal": 7
+          },
+          {
+            "name": "PostalCode",
+            "dataType": "string",
+            "sourceColumn": "PostalCode",
+            "displayOrdinal": 8
+          },
+          {
+            "name": "SalesTerritoryKey",
+            "dataType": "int64",
+            "sourceColumn": "SalesTerritoryKey",
+            "displayOrdinal": 9
+          },
+          {
+            "name": "IpAddressLocator",
+            "dataType": "string",
+            "sourceColumn": "IpAddressLocator",
+            "displayOrdinal": 10
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DimGeography",
+            "source": {
+              "query": "SELECT [GeographyKey],[City],[StateProvinceCode],[StateProvinceName],[CountryRegionCode],[EnglishCountryRegionName],[SpanishCountryRegionName],[FrenchCountryRegionName],[PostalCode],[SalesTerritoryKey],[IpAddressLocator] FROM [dbo].[DimGeography]",
+              "dataSource": "SqlServer gz7pumjzm4.database.windows.net Advenature_Works"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DimProduct",
+        "description": "All data from DimProduct",
+        "columns": [
+          {
+            "name": "ProductKey",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "ProductKey"
+          },
+          {
+            "name": "ProductAlternateKey",
+            "dataType": "string",
+            "sourceColumn": "ProductAlternateKey",
+            "displayOrdinal": 1
+          },
+          {
+            "name": "ProductSubcategoryKey",
+            "dataType": "int64",
+            "sourceColumn": "ProductSubcategoryKey",
+            "displayOrdinal": 2
+          },
+          {
+            "name": "WeightUnitMeasureCode",
+            "dataType": "string",
+            "sourceColumn": "WeightUnitMeasureCode",
+            "displayOrdinal": 3
+          },
+          {
+            "name": "SizeUnitMeasureCode",
+            "dataType": "string",
+            "sourceColumn": "SizeUnitMeasureCode",
+            "displayOrdinal": 4
+          },
+          {
+            "name": "EnglishProductName",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "EnglishProductName",
+            "displayOrdinal": 5
+          },
+          {
+            "name": "SpanishProductName",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "SpanishProductName",
+            "displayOrdinal": 6
+          },
+          {
+            "name": "FrenchProductName",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "FrenchProductName",
+            "displayOrdinal": 7
+          },
+          {
+            "name": "StandardCost",
+            "dataType": "decimal",
+            "sourceColumn": "StandardCost",
+            "displayOrdinal": 8
+          },
+          {
+            "name": "FinishedGoodsFlag",
+            "dataType": "boolean",
+            "isNullable": false,
+            "sourceColumn": "FinishedGoodsFlag",
+            "displayOrdinal": 9
+          },
+          {
+            "name": "Color",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "Color",
+            "displayOrdinal": 10
+          },
+          {
+            "name": "SafetyStockLevel",
+            "dataType": "int64",
+            "sourceColumn": "SafetyStockLevel",
+            "displayOrdinal": 11
+          },
+          {
+            "name": "ReorderPoint",
+            "dataType": "int64",
+            "sourceColumn": "ReorderPoint",
+            "displayOrdinal": 12
+          },
+          {
+            "name": "ListPrice",
+            "dataType": "decimal",
+            "sourceColumn": "ListPrice",
+            "displayOrdinal": 13
+          },
+          {
+            "name": "Size",
+            "dataType": "string",
+            "sourceColumn": "Size",
+            "displayOrdinal": 14
+          },
+          {
+            "name": "SizeRange",
+            "dataType": "string",
+            "sourceColumn": "SizeRange",
+            "displayOrdinal": 15
+          },
+          {
+            "name": "Weight",
+            "dataType": "double",
+            "sourceColumn": "Weight",
+            "displayOrdinal": 16
+          },
+          {
+            "name": "DaysToManufacture",
+            "dataType": "int64",
+            "sourceColumn": "DaysToManufacture",
+            "displayOrdinal": 17
+          },
+          {
+            "name": "ProductLine",
+            "dataType": "string",
+            "sourceColumn": "ProductLine",
+            "displayOrdinal": 18
+          },
+          {
+            "name": "DealerPrice",
+            "dataType": "decimal",
+            "sourceColumn": "DealerPrice",
+            "displayOrdinal": 19
+          },
+          {
+            "name": "Class",
+            "dataType": "string",
+            "sourceColumn": "Class",
+            "displayOrdinal": 20
+          },
+          {
+            "name": "Style",
+            "dataType": "string",
+            "sourceColumn": "Style",
+            "displayOrdinal": 21
+          },
+          {
+            "name": "ModelName",
+            "dataType": "string",
+            "sourceColumn": "ModelName",
+            "displayOrdinal": 22
+          },
+          {
+            "name": "LargePhoto",
+            "dataType": "binary",
+            "sourceColumn": "LargePhoto",
+            "displayOrdinal": 23
+          },
+          {
+            "name": "EnglishDescription",
+            "dataType": "string",
+            "sourceColumn": "EnglishDescription",
+            "displayOrdinal": 24
+          },
+          {
+            "name": "FrenchDescription",
+            "dataType": "string",
+            "sourceColumn": "FrenchDescription",
+            "displayOrdinal": 25
+          },
+          {
+            "name": "ChineseDescription",
+            "dataType": "string",
+            "sourceColumn": "ChineseDescription",
+            "displayOrdinal": 26
+          },
+          {
+            "name": "ArabicDescription",
+            "dataType": "string",
+            "sourceColumn": "ArabicDescription",
+            "displayOrdinal": 27
+          },
+          {
+            "name": "HebrewDescription",
+            "dataType": "string",
+            "sourceColumn": "HebrewDescription",
+            "displayOrdinal": 28
+          },
+          {
+            "name": "ThaiDescription",
+            "dataType": "string",
+            "sourceColumn": "ThaiDescription",
+            "displayOrdinal": 29
+          },
+          {
+            "name": "GermanDescription",
+            "dataType": "string",
+            "sourceColumn": "GermanDescription",
+            "displayOrdinal": 30
+          },
+          {
+            "name": "JapaneseDescription",
+            "dataType": "string",
+            "sourceColumn": "JapaneseDescription",
+            "displayOrdinal": 31
+          },
+          {
+            "name": "TurkishDescription",
+            "dataType": "string",
+            "sourceColumn": "TurkishDescription",
+            "displayOrdinal": 32
+          },
+          {
+            "name": "StartDate",
+            "dataType": "dateTime",
+            "sourceColumn": "StartDate",
+            "displayOrdinal": 33
+          },
+          {
+            "name": "EndDate",
+            "dataType": "dateTime",
+            "sourceColumn": "EndDate",
+            "displayOrdinal": 34
+          },
+          {
+            "name": "Status",
+            "dataType": "string",
+            "sourceColumn": "Status",
+            "displayOrdinal": 35
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DimProduct",
+            "source": {
+              "query": "SELECT [ProductKey],[ProductAlternateKey],[ProductSubcategoryKey],[WeightUnitMeasureCode],[SizeUnitMeasureCode],[EnglishProductName],[SpanishProductName],[FrenchProductName],[StandardCost],[FinishedGoodsFlag],[Color],[SafetyStockLevel],[ReorderPoint],[ListPrice],[Size],[SizeRange],[Weight],[DaysToManufacture],[ProductLine],[DealerPrice],[Class],[Style],[ModelName],[LargePhoto],[EnglishDescription],[FrenchDescription],[ChineseDescription],[ArabicDescription],[HebrewDescription],[ThaiDescription],[GermanDescription],[JapaneseDescription],[TurkishDescription],[StartDate],[EndDate],[Status] FROM [dbo].[DimProduct]",
+              "dataSource": "SqlServer gz7pumjzm4.database.windows.net Advenature_Works"
+            }
+          }
+        ]
+      },
+      {
+        "name": "FactInternetSales",
+        "description": "All data from FactInternetSales",
+        "columns": [
+          {
+            "name": "ProductKey",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "ProductKey"
+          },
+          {
+            "name": "OrderDateKey",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "OrderDateKey",
+            "displayOrdinal": 1
+          },
+          {
+            "name": "DueDateKey",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "DueDateKey",
+            "displayOrdinal": 2
+          },
+          {
+            "name": "ShipDateKey",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "ShipDateKey",
+            "displayOrdinal": 3
+          },
+          {
+            "name": "CustomerKey",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "CustomerKey",
+            "displayOrdinal": 4
+          },
+          {
+            "name": "PromotionKey",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "PromotionKey",
+            "displayOrdinal": 5
+          },
+          {
+            "name": "CurrencyKey",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "CurrencyKey",
+            "displayOrdinal": 6
+          },
+          {
+            "name": "SalesTerritoryKey",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "SalesTerritoryKey",
+            "displayOrdinal": 7
+          },
+          {
+            "name": "SalesOrderNumber",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "SalesOrderNumber",
+            "displayOrdinal": 8
+          },
+          {
+            "name": "SalesOrderLineNumber",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "SalesOrderLineNumber",
+            "displayOrdinal": 9
+          },
+          {
+            "name": "RevisionNumber",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "RevisionNumber",
+            "displayOrdinal": 10
+          },
+          {
+            "name": "OrderQuantity",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "OrderQuantity",
+            "displayOrdinal": 11
+          },
+          {
+            "name": "UnitPrice",
+            "dataType": "decimal",
+            "isNullable": false,
+            "sourceColumn": "UnitPrice",
+            "displayOrdinal": 12
+          },
+          {
+            "name": "ExtendedAmount",
+            "dataType": "decimal",
+            "isNullable": false,
+            "sourceColumn": "ExtendedAmount",
+            "displayOrdinal": 13
+          },
+          {
+            "name": "UnitPriceDiscountPct",
+            "dataType": "double",
+            "isNullable": false,
+            "sourceColumn": "UnitPriceDiscountPct",
+            "displayOrdinal": 14
+          },
+          {
+            "name": "DiscountAmount",
+            "dataType": "double",
+            "isNullable": false,
+            "sourceColumn": "DiscountAmount",
+            "displayOrdinal": 15
+          },
+          {
+            "name": "ProductStandardCost",
+            "dataType": "decimal",
+            "isNullable": false,
+            "sourceColumn": "ProductStandardCost",
+            "displayOrdinal": 16
+          },
+          {
+            "name": "TotalProductCost",
+            "dataType": "decimal",
+            "isNullable": false,
+            "sourceColumn": "TotalProductCost",
+            "displayOrdinal": 17
+          },
+          {
+            "name": "SalesAmount",
+            "dataType": "decimal",
+            "isNullable": false,
+            "sourceColumn": "SalesAmount",
+            "displayOrdinal": 18
+          },
+          {
+            "name": "TaxAmt",
+            "dataType": "decimal",
+            "isNullable": false,
+            "sourceColumn": "TaxAmt",
+            "displayOrdinal": 19
+          },
+          {
+            "name": "Freight",
+            "dataType": "decimal",
+            "isNullable": false,
+            "sourceColumn": "Freight",
+            "displayOrdinal": 20
+          },
+          {
+            "name": "CarrierTrackingNumber",
+            "dataType": "string",
+            "sourceColumn": "CarrierTrackingNumber",
+            "displayOrdinal": 21
+          },
+          {
+            "name": "CustomerPONumber",
+            "dataType": "string",
+            "sourceColumn": "CustomerPONumber",
+            "displayOrdinal": 22
+          },
+          {
+            "name": "OrderDate",
+            "dataType": "dateTime",
+            "sourceColumn": "OrderDate",
+            "displayOrdinal": 23
+          },
+          {
+            "name": "DueDate",
+            "dataType": "dateTime",
+            "sourceColumn": "DueDate",
+            "displayOrdinal": 24
+          },
+          {
+            "name": "ShipDate",
+            "dataType": "dateTime",
+            "sourceColumn": "ShipDate",
+            "displayOrdinal": 25
+          },
+          {
+            "type": "calculated",
+            "name": "aff",
+            "dataType": "unknown",
+            "isDataTypeInferred": true,
+            "expression": "SUM('FactInternetSales'[SalesAmount]'FactInternetSales'[TaxAmt])"
+          },
+          {
+            "type": "calculated",
+            "name": "abc",
+            "dataType": "unknown",
+            "isDataTypeInferred": true,
+            "expression": "=AVERAGE('FactInternetSales'[SalesAmount])"
+          },
+          {
+            "type": "calculated",
+            "name": "aaaaaaaa",
+            "dataType": "unknown",
+            "isDataTypeInferred": true,
+            "expression": "=AVERAGE('FactInternetSales'[UnitPrice])"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "FactInternetSales",
+            "source": {
+              "query": "SELECT [ProductKey],[OrderDateKey],[DueDateKey],[ShipDateKey],[CustomerKey],[PromotionKey],[CurrencyKey],[SalesTerritoryKey],[SalesOrderNumber],[SalesOrderLineNumber],[RevisionNumber],[OrderQuantity],[UnitPrice],[ExtendedAmount],[UnitPriceDiscountPct],[DiscountAmount],[ProductStandardCost],[TotalProductCost],[SalesAmount],[TaxAmt],[Freight],[CarrierTrackingNumber],[CustomerPONumber],[OrderDate],[DueDate],[ShipDate] FROM [dbo].[FactInternetSales]",
+              "dataSource": "SqlServer gz7pumjzm4.database.windows.net Advenature_Works"
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Average Tax",
+            "expression": "AVERAGE('FactInternetSales'[TaxAmt])"
+          }
+        ]
+      },
+      {
+        "name": "DimSalesTerritory",
+        "description": "All data from DimSalesTerritory",
+        "columns": [
+          {
+            "name": "SalesTerritoryKey",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "SalesTerritoryKey"
+          },
+          {
+            "name": "SalesTerritoryAlternateKey",
+            "dataType": "int64",
+            "sourceColumn": "SalesTerritoryAlternateKey",
+            "displayOrdinal": 1
+          },
+          {
+            "name": "SalesTerritoryRegion",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "SalesTerritoryRegion",
+            "displayOrdinal": 2
+          },
+          {
+            "name": "SalesTerritoryCountry",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "SalesTerritoryCountry",
+            "displayOrdinal": 3
+          },
+          {
+            "name": "SalesTerritoryGroup",
+            "dataType": "string",
+            "sourceColumn": "SalesTerritoryGroup",
+            "displayOrdinal": 4
+          },
+          {
+            "name": "SalesTerritoryImage",
+            "dataType": "binary",
+            "sourceColumn": "SalesTerritoryImage",
+            "displayOrdinal": 5
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DimSalesTerritory",
+            "source": {
+              "query": "SELECT [SalesTerritoryKey],[SalesTerritoryAlternateKey],[SalesTerritoryRegion],[SalesTerritoryCountry],[SalesTerritoryGroup],[SalesTerritoryImage] FROM [dbo].[DimSalesTerritory]",
+              "dataSource": "SqlServer gz7pumjzm4.database.windows.net Advenature_Works"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DimUserSecurity",
+        "description": "All data from DimUserSecurity",
+        "columns": [
+          {
+            "name": "EmployeeId",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "EmployeeId"
+          },
+          {
+            "name": "SalesTerritoryId",
+            "dataType": "string",
+            "sourceColumn": "SalesTerritoryId",
+            "displayOrdinal": 1
+          },
+          {
+            "name": "FirstName",
+            "dataType": "string",
+            "sourceColumn": "FirstName",
+            "displayOrdinal": 2
+          },
+          {
+            "name": "LastName",
+            "dataType": "string",
+            "sourceColumn": "LastName",
+            "displayOrdinal": 3
+          },
+          {
+            "name": "UserName",
+            "dataType": "string",
+            "sourceColumn": "UserName",
+            "displayOrdinal": 4
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DimUserSecurity",
+            "source": {
+              "query": "SELECT [EmployeeId],[SalesTerritoryId],[FirstName],[LastName],[UserName] FROM [dbo].[DimUserSecurity]",
+              "dataSource": "SqlServer gz7pumjzm4.database.windows.net Advenature_Works"
+            }
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "f4b51cbe-0fe9-49b3-a6ef-4d52777c01b9",
+        "fromTable": "DimProduct",
+        "fromColumn": "ProductKey",
+        "toTable": "FactInternetSales",
+        "toColumn": "ProductKey",
+        "crossFilteringBehavior": "bothDirections",
+        "relyOnReferentialIntegrity": true
+      },
+      {
+        "name": "5c7df71f-23cc-4265-b820-f6d403c95b96",
+        "fromTable": "FactInternetSales",
+        "fromColumn": "CustomerKey",
+        "toTable": "DimCustomer",
+        "toColumn": "CustomerKey",
+        "relyOnReferentialIntegrity": true
+      },
+      {
+        "name": "4bf29e13-f0b4-4348-8ce4-ed90bc4efed1",
+        "fromTable": "FactInternetSales",
+        "fromColumn": "OrderDateKey",
+        "toTable": "DimDate",
+        "toColumn": "FullDateAlternateKey",
+        "relyOnReferentialIntegrity": true
+      },
+      {
+        "name": "eae73cd6-5588-4130-9cc6-06e9c9ad82b1",
+        "fromTable": "DimSalesTerritory",
+        "fromColumn": "SalesTerritoryKey",
+        "toTable": "FactInternetSales",
+        "toColumn": "SalesTerritoryKey",
+        "crossFilteringBehavior": "bothDirections",
+        "relyOnReferentialIntegrity": true
+      },
+      {
+        "name": "0242e29e-ed30-4d52-ae68-d8fefdfce28f",
+        "fromTable": "DimCustomer",
+        "fromColumn": "GeographyKey",
+        "toTable": "DimGeography",
+        "toColumn": "GeographyKey",
+        "crossFilteringBehavior": "bothDirections",
+        "relyOnReferentialIntegrity": true
+      },
+      {
+        "name": "60bee084-8f0b-4925-967a-9e4475011213",
+        "fromCardinality": "one",
+        "fromTable": "DimSalesTerritory",
+        "fromColumn": "SalesTerritoryKey",
+        "toTable": "DimUserSecurity",
+        "toColumn": "SalesTerritoryId",
+        "crossFilteringBehavior": "bothDirections",
+        "relyOnReferentialIntegrity": true
+      }
+    ],
+    "annotations": [
+      {
+        "name": "ASW-DEFAULT-DIAGRAM",
+        "value": "{\"Version\":1,\"Name\":\"default\",\"Tables\":[{\"TableName\":\"FactInternetSales\",\"X\":311,\"Y\":165,\"Z\":5,\"Width\":225,\"Height\":275},{\"TableName\":\"DimDate\",\"X\":586,\"Y\":302,\"Z\":4,\"Width\":225,\"Height\":275},{\"TableName\":\"DimCustomer\",\"X\":587,\"Y\":11,\"Z\":3,\"Width\":225,\"Height\":275},{\"TableName\":\"DimProduct\",\"X\":21,\"Y\":289,\"Z\":1,\"Width\":225,\"Height\":275},{\"TableName\":\"DimSalesTerritory\",\"X\":21,\"Y\":12,\"Z\":2,\"Width\":225,\"Height\":275}]}"
+      }
+    ]
+  }
+}
